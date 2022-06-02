@@ -3,7 +3,8 @@ import { UserRepository,
          CourseRepository,
          StartedCourseRepository,
          PlantRepository,
-         PlantTypeRepository
+         PlantTypeRepository,
+         ReminderRepository
         } from './repositories/index.js'
 import "dotenv/config";
 
@@ -21,6 +22,7 @@ class OracleDatabase {
         this.startedCourseRepository = new StartedCourseRepository(this)
         this.plantRepository = new PlantRepository(this)
         this.plantTypeRepository = new PlantTypeRepository(this)
+        this.ReminderRepository = new ReminderRepository (this)
     }
 
     async connect() {
@@ -35,6 +37,8 @@ class OracleDatabase {
         await this.startedCourseRepository.initRepoEnvironment()
         await this.plantTypeRepository.initRepoEnvironment()
         await this.plantRepository.initRepoEnvironment()
+        await this.ReminderRepository.initRepoEnvironment()
+
 
         console.log("Done initializing db environment")
     }
