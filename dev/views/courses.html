@@ -50,19 +50,15 @@
                 <div class="page-name">
                     Courses
                 </div>
-                    <div class="search">
-                        <form action="http://localhost:4000/course">
+                <section class="courseSearchBar">
                             <input type="text"
                                 placeholder=" Search Courses"
                                 name="search">
-                            <button>
-                                <i class="fa fa-search"
-                                    style="font-size: 18px;">
-                                </i>
-                            </button>
+                                <button id="searchBtn" type="button"> <i class="fa fa-search" style="font-size: 15px;"></i></button>
                         </form>
                     </div>
                 </div>
+
                     <div class="available-courses">
                         <div class="course-summary">
                             <div class="course-summary-row course-summary-image-and-text-container">
@@ -119,5 +115,6 @@
                 </div>
             </div>
         </main>
+        <script src="@@host/public/frontend/resources/connection_scripts/searchbar.js">  </script>
     </body>
 </html>
