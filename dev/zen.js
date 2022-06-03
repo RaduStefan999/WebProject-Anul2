@@ -4,8 +4,10 @@ import { App } from "./vendor/index.js";
 import { FileManager } from "./vendor/fileManager/index.js"
 import { mainRoutes } from "./routes/web/index.js";
 import { authRoutes } from "./routes/api/index.js";
-import "dotenv/config"
+import "dotenv/config";
+import sendMail from "./vendor/mail/mail.js"
 
+sendMail() 
 const db = new OracleDatabase()
 await db.connect()
 
@@ -17,7 +19,7 @@ if (parseInt(process.env.DB_SEED) == 1) {
     await SeedAdmins(db)
 }
 
-const app = new App(process.env.PORT || 4000, db, FileManager)
+const app = new App(process.env.PORT || 4001, db, FileManager)
 app.useRoute(mainRoutes)
 app.useRoute(authRoutes)
 
