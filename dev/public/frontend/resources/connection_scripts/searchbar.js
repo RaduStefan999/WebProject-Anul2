@@ -10,12 +10,22 @@
             data[inputElement.getAttribute("name")] = inputElement.type === "file" ? inputElement.files : inputElement.value
         });
 
-        fetch(url)
+        fetch("http://localhost:4001/course")
         .then(response => response.json())
         .then(repos => {
           console.log(repos);
-        })
-      .catch(err => console.log(err))
+
+          const list = document.getElementById("list");
+          document.documentElement.innerHTML = "<pre>" +
+         document.documentElement.innerHTML.replace(/</g,"&lt;") +
+            "</pre>";
+
+         list.innerHTML += `<li><a href="  ">Item ${list.children.length + 1}</a></li>`;
+
+         for 
+
+        }
+        )
 
     return data
 }
