@@ -17,7 +17,7 @@ if (parseInt(process.env.DB_SEED) == 1) {
     await SeedAdmins(db)
 }
 
-const app = new App(process.env.PORT || 4000, db, FileManager)
+const app = new App(process.env.PORT || 4001, db, FileManager)
 app.useRoute(mainRoutes)
 app.useRoute(authRoutes)
 
