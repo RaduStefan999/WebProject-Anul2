@@ -115,7 +115,7 @@
                     <br />
                     For more dynamic pages like My Garden page, the frontend will use AJAX calls to the backend REST API in order to obtain data.
                     <br />
-                    For authentication, the backend will generate a token for each logged in user that will be received by the frontend and stored in local storage. The token will be provided for each API call that requires authentication, for example, /get_my_garden_info.
+                    For authentication, the backend will generate a token for each logged in user that will be received by the frontend and stored in a cookie The token will be provided for each API call that requires authentication, for example, /get_my_garden_info.
                 </p>
                 <h3 id="data-flow">2.2 Data Flow</h3>
                 <p>
@@ -123,13 +123,77 @@
                     <br />
                     The frontend will do POST request with data such as User Registration Info, User Login Info, Feedback, Add Course Info, Edit Course Info, Add Plant To Garden Info.
                 </p>
+                <h3 id="data-flow">2.2 Data Flow within the backend</h3>
+                <p>
+                    The backend data flow has 3 main portions:
+                    <br />
+                    The PLSQL packeges that comunicate directly with the oracle database
+                    <br />
+                    The repositories that provide an interface far calling the PL SQL functions
+                    <br />
+                    The models that are used by controllers and other backend components
+                    <br />
+                </p>
+
                 <h3 id="code-structure">2.3 Code structure</h3>
                 <p>
                     The backend follows the MVC pattern, the authorisation will be structured in middlewares and each route will be managed by a function in a controller.
+                
+                    <br />
+                    <img src="backend.png" />
                 </p>
                 <h3 id="data-storage">2.4 Data storage</h3>
                 <p>
-                    The data will be stored either in a MySQL database or and Oracle database with a layer of PL/SQL depending on how much time we have.
+                    The data is be stored either in an Oracle database with a layer of PL/SQL.
+                    <br />
+                    Database architecture
+                    <br />
+
+                    <img height="800px" width="800px" src="database_diagram.png" />
+                </p>
+
+                <h3 id="data-flow">2.5 Data Flow within the backend</h3>
+
+
+                <h3 id="data-storage">2.4 Rendered pages</h3>
+                <p>
+                    The data is be stored either in an Oracle database with a layer of PL/SQL.
+                    <br />
+                    Database architecture
+                    <br />
+
+                    <img height="800px" width="800px" src="pages.png" />
+                </p>
+
+                <h3 id="data-flow">2.5 Data Flow within the backend</h3>
+
+                <h3 >Things we did </h3>
+                <p>
+
+                    -> export de date (in csv)
+                    -> import de date (bonus)
+
+                    -> administraea aplicatia
+                    -> MVC (bonus)
+                    -> ajax (abligatoriu)
+                    -> datele sunt stocate persistent
+                    -> documentatie
+                    -> hashing
+                    -> oop + fucntional (bonus)
+                    -> alarms
+                    -> ce a lucrat fiecare
+                    -> sustinerea anticipata a proiectului
+                    -> 90 de punce (+1 pct)
+                    -> open API (+1 pct)
+                    -> RSS feed
+                    -> Oracle DBSM
+
+                    -> seedere
+                    -> cron jobs
+                    -> Open API
+
+                    -> middleware
+                    -> hostat
                 </p>
 
             </div>
