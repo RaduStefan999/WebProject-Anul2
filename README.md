@@ -4,7 +4,7 @@ Gardening application that lets users manage their own garden and plants while g
 
 This repository holds our 2022 Web technologies project which was graded with the best score in our class.
 
-We have developed and a Model View Controller framework in NodeJS that we called ZEN. The main features of this framework are:
+We have developed a Model View Controller framework in NodeJS that we called ZEN. The main features of this framework are:
 
 * It uses PL SQL routines to communicate with an Oracle database.
 * It uses JWT tokens to enable user authentication.
