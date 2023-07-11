@@ -1,4 +1,4 @@
-# Gardening App developed with with ZEN MVC framework
+# Gardening App developed with ZEN MVC framework
 
 Gardening application that lets users manage their own garden and plants while giving useful tips and tricks.
 
